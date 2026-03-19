@@ -8,7 +8,7 @@ def test_max_subarray_standard():
 
 def test_max_subarray_all_negative():
     # Should return the single largest negative number
-    assert max_subarray_sum([-5, -2, -9, -1]) == -2
+    assert max_subarray_sum([-5, -2, -9, -1]) == -1
 
 def test_max_subarray_single_element():
     assert max_subarray_sum([5]) == 5
