@@ -44,11 +44,13 @@ def test_invalid_operation():
         simple_calculator("", 5, 3)                     # Test for empty operation
     with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
         simple_calculator("ADD", 5, 3)                  # NEW: Test for uppercase string (function expects strictly lowercase)
+
 def test_floating_point_operations():
     """Tests the calculator using decimal (float) values."""
     assert simple_calculator("add", 2.5, 3.1) == 5.6
     assert simple_calculator("multiply", 1.5, 2.0) == 3.0
     assert simple_calculator("divide", 5.5, 2.0) == 2.75
     assert simple_calculator("subtract", 5.5, 2.2) == pytest.approx(3.3)
+
 if __name__ == "__main__":
     pytest.main()
